@@ -14,7 +14,7 @@ rl.on("line", (line) => {
   if (regType.test(line.value) && line.length <= 100) {
     searchIndex(line);
   }
-  rl.close;
+  rl.close();
 });
 
 // function searchIndex(s) {
@@ -36,6 +36,7 @@ rl.on("line", (line) => {
 //   }
 //   console.log(result);
 // }
+
 function searchIndex(s) {
   let indexResult = [];
   for (var i = 0; i < 26; i++) {
