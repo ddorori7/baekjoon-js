@@ -17,22 +17,30 @@ rl.on("line", (line) => {
   rl.close;
 });
 
+// function searchIndex(s) {
+//   let alphabet = new Array(); // 알바펫 소문자 배열
+//   var result = ""; // 결과
+//   const count = 26; // 소문자 갯수
+//   for (var i = 0; i < count; i++) {
+//     // 알파벳 배열 만들기
+//     alphabet[i] = String.fromCharCode(i + 97);
+//     alphabet.push(alphabet[i]);
+//     // 결과 조건 설정 + 결과값 만들기
+//     if (s.indexOf(alphabet[i]) != -1) {
+//       result += s.indexOf(alphabet[i]) + " ";
+//     } else if (result.indexOf[alphabet[i]] > -1) {
+//       result += "";
+//     } else {
+//       result += -1 + " ";
+//     }
+//   }
+//   console.log(result);
+// }
 function searchIndex(s) {
-  let alphabet = new Array(); // 알바펫 소문자 배열
-  var result = ""; // 결과
-  const count = 26; // 소문자 갯수
-  for (var i = 0; i < count; i++) {
-    // 알파벳 배열 만들기
-    alphabet[i] = String.fromCharCode(i + 97);
-    alphabet.push(alphabet[i]);
-    // 결과 조건 설정 + 결과값 만들기
-    if (s.indexOf(alphabet[i]) != -1) {
-      result += s.indexOf(alphabet[i]) + " ";
-    } else if (result.indexOf[alphabet[i]] > -1) {
-      result += "";
-    } else {
-      result += -1 + " ";
-    }
+  let indexResult = [];
+  for (var i = 0; i < 26; i++) {
+    var index = s.indexOf(String.fromCharCode(i + 97));
+    indexResult.push(index);
   }
-  console.log(result);
+  console.log(indexResult.join(" "));
 }
